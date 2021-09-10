@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Application", "Movies.Application\Movies.Application.csproj", "{C28C1209-8241-46B8-BD5A-3771097CE532}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Application", "Movies.Application\Movies.Application.csproj", "{C28C1209-8241-46B8-BD5A-3771097CE532}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Infrastructure", "Movies.Infrastructure\Movies.Infrastructure.csproj", "{0A494820-2A27-46A0-85E5-B8AB03494A22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Infrastructure", "Movies.Infrastructure\Movies.Infrastructure.csproj", "{0A494820-2A27-46A0-85E5-B8AB03494A22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Domain", "Movies.Domain\Movies.Domain.csproj", "{C86861AB-7E0B-4D71-90EC-49391F16F30E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0A494820-2A27-46A0-85E5-B8AB03494A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A494820-2A27-46A0-85E5-B8AB03494A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A494820-2A27-46A0-85E5-B8AB03494A22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C86861AB-7E0B-4D71-90EC-49391F16F30E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C86861AB-7E0B-4D71-90EC-49391F16F30E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C86861AB-7E0B-4D71-90EC-49391F16F30E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C86861AB-7E0B-4D71-90EC-49391F16F30E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
