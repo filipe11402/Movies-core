@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Movies.Domain.Services
 {
-    public interface IMovieRepository
+    public interface IMovieService
     {
         Task<MovieModel> CreateMovie(MovieModel newMovie);
         Task<bool> UpdateMovie(MovieModel updatedMovie);
