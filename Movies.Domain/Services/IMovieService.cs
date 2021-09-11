@@ -13,5 +13,6 @@ namespace Movies.Domain.Services
         Task<bool> UpdateMovie(MovieModel updatedMovie);
         Task<bool> DeleteMovie(string movieId);
         Task<MovieModel> FetchMovie(string movieId);
+        Task<IEnumerable<MovieModel>> FetchMovies();
     }
 }

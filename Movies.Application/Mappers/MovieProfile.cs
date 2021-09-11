@@ -28,7 +28,15 @@ namespace Movies.Application.Mappers
                 .ForMember(d => d.Id, (o) => o.MapFrom(src => src.Id))
                 .ForMember(d => d.Status, (o) => o.MapFrom(src => src.Status));
 
+            CreateMap<UpdateMovieModel, MovieModel>()
+                .ForMember(d => d.Id, (o) => o.MapFrom(src => src.Id))
+                .ForMember(d => d.Name, (o) => o.MapFrom(src => src.Name))
+                .ForMember(d => d.ReleaseYear, (o) => o.MapFrom(src => src.ReleaseYear));
 
+            CreateMap<MovieModel, MovieViewModel>()
+                .ForMember(d => d.Id, (o) => o.MapFrom(src => src.Id))
+                .ForMember(d => d.Name, (o) => o.MapFrom(src => src.Name))
+                .ForMember(d => d.ReleaseYear, (o) => o.MapFrom(src => src.ReleaseYear));
         }
     }
 }

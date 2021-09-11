@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Movies.Domain.Models;
 using Movies.Domain.Services;
 using Movies.Infrastructure.Context;
 using Movies.Infrastructure.Entities;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Movies.Infrastructure.Services.Services
@@ -42,19 +44,52 @@ namespace Movies.Infrastructure.Services.Services
             return returnModel;
         }
 
-        public Task<bool> DeleteMovie(string movieId)
+        public async Task<bool> DeleteMovie(string movieId)
         {
-            throw new NotImplementedException();
+            var movie = await this._dbContext.Movies
+                                    .FirstOrDefaultAsync(token => token.Id == movieId);
+
+            if (movie == null) 
+            {
+                return false;
+            }
+
+            this._dbContext.Movies.Remove(movie);
+
+            await this._dbContext.SaveChangesAsync();
+
+            return true;
         }
 
-        public Task<MovieModel> FetchMovie(string movieId)
+        public async Task<MovieModel> FetchMovie(string movieId)
         {
-            throw new NotImplementedException();
+            var dbModel = await this._dbContext.Movies.FindAsync(movieId);
+
+            return this._mapper.Map<MovieModel>(dbModel);
         }
 
-        public Task<bool> UpdateMovie(MovieModel updatedMovie)
+        public async Task<IEnumerable<MovieModel>> FetchMovies()
         {
-            throw new NotImplementedException();
+            return this._mapper.Map<IEnumerable<MovieModel>>(this._dbContext.Movies);
+        }
+
+        public async Task<bool> UpdateMovie(MovieModel updatedMovie)
+        {
+            var exists = await this._dbContext.Movies.FirstOrDefaultAsync(token => token.Id == updatedMovie.Id);
+
+            if (exists == null) 
+            {
+                return false;
+            }
+
+            exists.Name = updatedMovie.Name;
+            exists.ReleaseYear = updatedMovie.ReleaseYear;
+
+            var response = this._dbContext.Movies.Update(exists);
+
+            await this._dbContext.SaveChangesAsync();
+
+            return true;
         }
     }
 }
