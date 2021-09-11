@@ -1615,6 +1615,16 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Movies.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Movies.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Movies.Domain.dll": {}
+        }
+      },
       "Movies.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1628,6 +1638,21 @@
         },
         "runtime": {
           "bin/placeholder/Movies.Infrastructure.dll": {}
+        }
+      },
+      "Movies.Infrastructure.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "Movies.Domain": "1.0.0",
+          "Movies.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Movies.Infrastructure.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Movies.Infrastructure.Services.dll": {}
         }
       }
     }
@@ -6048,17 +6073,29 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Movies.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Movies.Domain/Movies.Domain.csproj",
+      "msbuildProject": "../Movies.Domain/Movies.Domain.csproj"
+    },
     "Movies.Infrastructure/1.0.0": {
       "type": "project",
       "path": "../Movies.Infrastructure/Movies.Infrastructure.csproj",
       "msbuildProject": "../Movies.Infrastructure/Movies.Infrastructure.csproj"
+    },
+    "Movies.Infrastructure.Services/1.0.0": {
+      "type": "project",
+      "path": "../Movies.Infrastructure.Services/Movies.Infrastructure.Services.csproj",
+      "msbuildProject": "../Movies.Infrastructure.Services/Movies.Infrastructure.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.9",
+      "Movies.Domain >= 1.0.0",
       "Movies.Infrastructure >= 1.0.0",
+      "Movies.Infrastructure.Services >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -6089,6 +6126,12 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\filip\\Desktop\\stuff\\C#\\Movies\\Movies.Domain\\Movies.Domain.csproj": {
+              "projectPath": "C:\\Users\\filip\\Desktop\\stuff\\C#\\Movies\\Movies.Domain\\Movies.Domain.csproj"
+            },
+            "C:\\Users\\filip\\Desktop\\stuff\\C#\\Movies\\Movies.Infrastructure.Services\\Movies.Infrastructure.Services.csproj": {
+              "projectPath": "C:\\Users\\filip\\Desktop\\stuff\\C#\\Movies\\Movies.Infrastructure.Services\\Movies.Infrastructure.Services.csproj"
+            },
             "C:\\Users\\filip\\Desktop\\stuff\\C#\\Movies\\Movies.Infrastructure\\Movies.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\filip\\Desktop\\stuff\\C#\\Movies\\Movies.Infrastructure\\Movies.Infrastructure.csproj"
             }

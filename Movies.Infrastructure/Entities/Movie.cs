@@ -10,6 +10,6 @@ namespace Movies.Infrastructure.Entities
     {
         public string Id { get; set; }
         public string Name { get; set; }
-        public DateTime ReleaseYear { get; set; }
+        public string ReleaseYear { get; set; }
     }
 }

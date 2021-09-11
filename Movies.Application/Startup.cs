@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Movies.Infrastructure;
+using Movies.Infrastructure.Services.Mappers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +36,9 @@ namespace Movies.Application
             });
 
             services.AddInfrastructure(Configuration);
+            services.AddAutoMapper(
+                typeof(Startup),
+                typeof(MovieDomainProfile));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

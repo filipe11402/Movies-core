@@ -23,6 +23,10 @@ namespace Movies.Infrastructure.Context
             modelBuilder.Entity<Movie>()
                 .Property(property => property.Name)
                 .HasMaxLength(250);
+
+            modelBuilder.Entity<Movie>()
+                .Property(property => property.ReleaseYear)
+                .HasMaxLength(4);
         }
     }
 }
