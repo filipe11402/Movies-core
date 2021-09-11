@@ -23,6 +23,12 @@ namespace Movies.Application.Mappers
                         dst.Id = Guid.NewGuid().ToString();
                     }
                 });
+
+            CreateMap<MovieCreationStatusModel, CreateMovieViewModel>()
+                .ForMember(d => d.Id, (o) => o.MapFrom(src => src.Id))
+                .ForMember(d => d.Status, (o) => o.MapFrom(src => src.Status));
+
+
         }
     }
 }

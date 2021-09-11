@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "WyU+Gjke3EOJk4qNjtsSlGkyWHLMDFHlSfpf2/6rGxCZRlCjO2Pcxc5E6Qdo325KLptyJOVSHNmL6aq+g2bTXg==",
+  "dgSpecHash": "AP54Z+FXZESlcAp65K/6XJz4yQVlIpiSXplUmBEsagN2wWYpsz+WFyLsMlbgyvyLKPiBmJyHhLhufwFKBc5LyQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\filip\\Desktop\\stuff\\C#\\Movies\\Movies.Application\\Movies.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\filip\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\filip\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\filip\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\filip\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\filip\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\filip\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\filip\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\filip\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

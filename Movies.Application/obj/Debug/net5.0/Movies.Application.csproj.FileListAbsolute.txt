@@ -67,3 +67,5 @@ C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Application\bin\Debug\net5.0\Movie
 C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Application\bin\Debug\net5.0\Movies.Infrastructure.Services.dll
 C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Application\bin\Debug\net5.0\Movies.Domain.pdb
 C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Application\bin\Debug\net5.0\Movies.Infrastructure.Services.pdb
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Application\bin\Debug\net5.0\MediatR.dll
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Application\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
