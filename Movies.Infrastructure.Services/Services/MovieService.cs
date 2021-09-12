@@ -63,9 +63,10 @@ namespace Movies.Infrastructure.Services.Services
 
         public async Task<MovieModel> FetchMovie(string movieId)
         {
-            var dbModel = await this._dbContext.Movies.FindAsync(movieId);
+            var movie = await this._dbContext.Movies
+                                                .FirstOrDefaultAsync(token => token.Id == movieId);
 
-            return this._mapper.Map<MovieModel>(dbModel);
+            return this._mapper.Map<MovieModel>(movie);
         }
 
         public async Task<IEnumerable<MovieModel>> FetchMovies()

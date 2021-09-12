@@ -35,16 +35,16 @@ namespace Movies.Application.Controllers
                 return StatusCode(StatusCodes.Status400BadRequest);
             }
 
-            var domainObj = this._mapper.Map<MovieModel>(viewModel);
+            var domainMovie = this._mapper.Map<MovieModel>(viewModel);
 
-            var response = await this._mediator.Send(new CreateMovieCommand(domainObj));
+            var movieDto = await this._mediator.Send(new CreateMovieCommand(domainMovie));
 
-            if (response.Status == "error")
+            if (movieDto.Status == "error")
             {
-                return StatusCode(StatusCodes.Status400BadRequest, response);
+                return StatusCode(StatusCodes.Status400BadRequest, movieDto);
             }
 
-            return StatusCode(StatusCodes.Status201Created, response);
+            return StatusCode(StatusCodes.Status201Created, movieDto);
         }
 
         [HttpPut]
@@ -56,20 +56,20 @@ namespace Movies.Application.Controllers
                 return StatusCode(StatusCodes.Status400BadRequest);
             }
 
-            var returnModel = new UpdateMovieViewModel();
+            var movieDto = new UpdateMovieViewModel();
 
-            var domainObj = this._mapper.Map<MovieModel>(viewModel);
+            var domainMovie = this._mapper.Map<MovieModel>(viewModel);
 
-            if (!await this._mediator.Send(new UpdateMovieCommand(domainObj)))
+            if (!await this._mediator.Send(new UpdateMovieCommand(domainMovie)))
             {
-                returnModel.Status = "doesnt exist";
+                movieDto.Status = "doesnt exist";
 
-                return StatusCode(StatusCodes.Status404NotFound, returnModel);
+                return StatusCode(StatusCodes.Status404NotFound, movieDto);
             }
 
-            returnModel.Status = "updated";
+            movieDto.Status = "updated";
 
-            return StatusCode(StatusCodes.Status200OK, returnModel);
+            return StatusCode(StatusCodes.Status200OK, movieDto);
         }
 
         [HttpDelete]
@@ -96,6 +96,24 @@ namespace Movies.Application.Controllers
         {
             return StatusCode(StatusCodes.Status200OK,
                 await this._mediator.Send(new GetMoviesQuery()));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> FetchMovie([FromQuery] string id) 
+        {
+            if (id == null) 
+            {
+                return StatusCode(StatusCodes.Status400BadRequest);
+            }
+
+            var movieDto = await this._mediator.Send(new GetMovieQuery(id));
+
+            if (movieDto == null) 
+            {
+                return StatusCode(StatusCodes.Status404NotFound);
+            }
+
+            return StatusCode(StatusCodes.Status302Found, movieDto);
         }
     }
 }
