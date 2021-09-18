@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Movies.Infrastructure.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Movies.Infrastructure.Context
 {
@@ -23,6 +18,10 @@ namespace Movies.Infrastructure.Context
             modelBuilder.Entity<Movie>()
                 .Property(property => property.Name)
                 .HasMaxLength(250);
+
+            modelBuilder.Entity<Movie>()
+                .Property(property => property.ReleaseYear)
+                .HasMaxLength(4);
         }
     }
 }
