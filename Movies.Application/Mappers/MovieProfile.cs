@@ -13,6 +13,7 @@ namespace Movies.Application.Mappers
                 .ForMember(d => d.Id, opt => opt.Ignore())
                 .ForMember(d => d.Name, (o) => o.MapFrom(src => src.Name))
                 .ForMember(d => d.ReleaseYear, (o) => o.MapFrom(src => src.ReleaseYear))
+                .ForMember(d => d.Synopsis, (o) => o.MapFrom(src => src.Synopsis))
                 .AfterMap((src, dst) =>
                 {
                     if (src.Id == null)
@@ -28,12 +29,14 @@ namespace Movies.Application.Mappers
             CreateMap<UpdateMovieModel, MovieModel>()
                 .ForMember(d => d.Id, (o) => o.MapFrom(src => src.Id))
                 .ForMember(d => d.Name, (o) => o.MapFrom(src => src.Name))
-                .ForMember(d => d.ReleaseYear, (o) => o.MapFrom(src => src.ReleaseYear));
+                .ForMember(d => d.ReleaseYear, (o) => o.MapFrom(src => src.ReleaseYear))
+                .ForMember(d => d.Synopsis, (o) => o.MapFrom(src => src.Synopsis));
 
             CreateMap<MovieModel, MovieViewModel>()
                 .ForMember(d => d.Id, (o) => o.MapFrom(src => src.Id))
                 .ForMember(d => d.Name, (o) => o.MapFrom(src => src.Name))
-                .ForMember(d => d.ReleaseYear, (o) => o.MapFrom(src => src.ReleaseYear));
+                .ForMember(d => d.ReleaseYear, (o) => o.MapFrom(src => src.ReleaseYear))
+                .ForMember(d => d.Synopsis, (o) => o.MapFrom(src => src.Synopsis));
         }
     }
 }

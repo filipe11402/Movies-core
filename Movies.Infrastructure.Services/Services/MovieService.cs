@@ -5,6 +5,7 @@ using Movies.Domain.Services;
 using Movies.Infrastructure.Context;
 using Movies.Infrastructure.Entities;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Movies.Infrastructure.Services.Services
@@ -26,16 +27,16 @@ namespace Movies.Infrastructure.Services.Services
         {
             var returnModel = new MovieCreationStatusModel();
 
-            var dbModel = this._mapper.Map<Movie>(newMovie);
-
-            var response = await this._dbContext.Movies.AddAsync(dbModel);
-
-            if (response == null) 
+            if (this._dbContext.Movies.FirstOrDefault(token => token.Name == newMovie.Name) != null) 
             {
                 returnModel.Status = "error";
 
                 return returnModel;
             }
+
+            var dbModel = this._mapper.Map<Movie>(newMovie);
+
+            await this._dbContext.Movies.AddAsync(dbModel);
 
             await this._dbContext.SaveChangesAsync();
 

@@ -1,9 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Movies.Infrastructure.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Updates : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,7 +12,8 @@ namespace Movies.Infrastructure.Migrations
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: true),
-                    ReleaseYear = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    ReleaseYear = table.Column<string>(type: "nvarchar(4)", maxLength: 4, nullable: true),
+                    Synopsis = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: true)
                 },
                 constraints: table =>
                 {
