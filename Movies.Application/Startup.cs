@@ -1,17 +1,14 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Movies.Infrastructure;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Movies.Infrastructure.Services;
+using Movies.Infrastructure.Services.Mappers;
+using System.Reflection;
 
 namespace Movies.Application
 {
@@ -35,6 +32,11 @@ namespace Movies.Application
             });
 
             services.AddInfrastructure(Configuration);
+            services.AddServices();
+            services.AddAutoMapper(
+                typeof(Startup),
+                typeof(MovieDomainProfile));
+            services.AddMediatR(Assembly.GetExecutingAssembly());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

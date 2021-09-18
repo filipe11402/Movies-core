@@ -1,0 +1,17 @@
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\bin\Debug\net5.0\Movies.Infrastructure.Services.deps.json
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\bin\Debug\net5.0\Movies.Infrastructure.Services.dll
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\bin\Debug\net5.0\ref\Movies.Infrastructure.Services.dll
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\bin\Debug\net5.0\Movies.Infrastructure.Services.pdb
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\bin\Debug\net5.0\Movies.Domain.dll
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\bin\Debug\net5.0\Movies.Infrastructure.dll
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\bin\Debug\net5.0\Movies.Domain.pdb
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\bin\Debug\net5.0\Movies.Infrastructure.pdb
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\obj\Debug\net5.0\Movies.Infrastructure.Services.csproj.AssemblyReference.cache
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\obj\Debug\net5.0\Movies.Infrastructure.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\obj\Debug\net5.0\Movies.Infrastructure.Services.AssemblyInfoInputs.cache
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\obj\Debug\net5.0\Movies.Infrastructure.Services.AssemblyInfo.cs
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\obj\Debug\net5.0\Movies.Infrastructure.Services.csproj.CoreCompileInputs.cache
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\obj\Debug\net5.0\Movies.Infrastructure.Services.csproj.CopyComplete
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\obj\Debug\net5.0\Movies.Infrastructure.Services.dll
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\obj\Debug\net5.0\ref\Movies.Infrastructure.Services.dll
+C:\Users\filip\Desktop\stuff\C#\Movies\Movies.Infrastructure.Services\obj\Debug\net5.0\Movies.Infrastructure.Services.pdb
