@@ -13,7 +13,9 @@ namespace Movies.Application.Mediator.Handlers
         private readonly IMovieService _movieService;
         private readonly IMapper _mapper;
 
-        public GetMovieQueryHandler(IMovieService movieService, IMapper mapper)
+        public GetMovieQueryHandler(
+            IMovieService movieService,
+            IMapper mapper)
         {
             this._movieService = movieService;
             this._mapper = mapper;

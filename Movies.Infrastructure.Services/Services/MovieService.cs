@@ -4,7 +4,6 @@ using Movies.Domain.Models;
 using Movies.Domain.Services;
 using Movies.Infrastructure.Context;
 using Movies.Infrastructure.Entities;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -15,7 +14,9 @@ namespace Movies.Infrastructure.Services.Services
         private readonly ApplicationDbContext _dbContext;
         private readonly IMapper _mapper;
 
-        public MovieService(ApplicationDbContext dbContext, IMapper mapper)
+        public MovieService(
+            ApplicationDbContext dbContext,
+            IMapper mapper)
         {
             this._dbContext = dbContext;
             this._mapper = mapper;

@@ -3,7 +3,6 @@ using MediatR;
 using Movies.Application.Mediator.Commands;
 using Movies.Application.Models.Movies;
 using Movies.Domain.Services;
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -14,7 +13,9 @@ namespace Movies.Application.Mediator.Handlers
         private readonly IMovieService _movieService;
         private readonly IMapper _mapper;
 
-        public CreateMovieCommandHandler(IMovieService movieService, IMapper mapper)
+        public CreateMovieCommandHandler(
+            IMovieService movieService,
+            IMapper mapper)
         {
             this._movieService = movieService;
             this._mapper = mapper;

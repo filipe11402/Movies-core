@@ -2,9 +2,6 @@
 using Movies.Application.Models.Movies;
 using Movies.Domain.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Movies.Application.Mappers
 {

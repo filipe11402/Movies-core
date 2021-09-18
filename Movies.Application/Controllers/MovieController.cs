@@ -6,9 +6,6 @@ using Movies.Application.Mediator.Commands;
 using Movies.Application.Mediator.Queries;
 using Movies.Application.Models.Movies;
 using Movies.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Movies.Application.Controllers
@@ -20,7 +17,9 @@ namespace Movies.Application.Controllers
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
 
-        public MovieController(IMediator mediator, IMapper mapper)
+        public MovieController(
+            IMediator mediator,
+            IMapper mapper)
         {
             this._mediator = mediator;
             this._mapper = mapper;
@@ -99,6 +98,7 @@ namespace Movies.Application.Controllers
         }
 
         [HttpGet]
+        [Route("fetch")]
         public async Task<IActionResult> FetchMovie([FromQuery] string id) 
         {
             if (id == null) 
